@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Be My Valentine ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: white;
+            padding: 40px 25px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #ff3b6f;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+        }
+
+        button {
+            padding: 12px 28px;
+            font-size: 1rem;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #yesBtn {
+            background: #ff3b6f;
+            color: white;
+        }
+
+        #yesBtn:hover {
+            background: #ff1f5a;
+            transform: scale(1.1);
+        }
+
+        #noBtn {
+            background: #ddd;
+            color: #333;
+            position: relative;
+        }
+
+        .message {
+            margin-top: 25px;
+            font-size: 1.3rem;
+            color: #ff3b6f;
+            display: none;
+        }
+
+        p{
+            font-size: 15px;
+            color: rgb(144, 139, 139);
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Vaishnavi Neg, I love you with all my heart. Will you be my Valentine’s date? 💖</h1>
+
+        <div class="buttons">
+            <button id="yesBtn">Yes ❤️</button>
+            <button id="noBtn">No 💔</button>
+        </div>
+        
+
+        <div class="message" id="message">
+            Yayyy!! 💕 I knew you’d say YES 😍
+        </div>
+
+        <br>
+        <br>
+        <p> No is a bit shy </p>
+        
+    </div>
+
+    <script>
+        const noBtn = document.getElementById("noBtn");
+        const yesBtn = document.getElementById("yesBtn");
+        const message = document.getElementById("message");
+
+        noBtn.addEventListener("mouseover", () => {
+            const x = Math.random() * 200 - 100;
+            const y = Math.random() * 200 - 100;
+
+            noBtn.style.transform = `translate(${x}px, ${y}px)`;
+        });
+
+        yesBtn.addEventListener("click", () => {
+            message.style.display = "block";
+            noBtn.style.display = "none";
+            yesBtn.style.display = "none";
+        });
+    </script>
+
+</body>
+</html>
